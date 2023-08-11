@@ -1,0 +1,37 @@
+@import './utils.scss';
+.CommonHeader {
+  background-color: $gray1;
+  color: $white;
+  .header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    background: $gray1;
+    padding: 4px 50px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: $white;
+    width: 1360px;
+  }
+  .title {
+    text-decoration: none;
+    color: $white;
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-basis: 1;
+    text-decoration: none;
+    .item-list {
+      margin-left: 2rem;
+      color: $white;
+    }
+    .item-list:hover {
+      font-size: 30px;
+    }
+  }
+}
