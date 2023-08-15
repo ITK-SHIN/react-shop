@@ -1,4 +1,4 @@
-@import './utils.scss';
+@import './Utils.scss';
 .Home {
   background-color: $gray2;
   .home-bg {
@@ -11,16 +11,20 @@
   .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    padding: 3rem 0.5rem 2rem 2rem;
+    padding: 0;
     max-width: 1360px;
     margin: 0 auto;
+    margin-top: 20px;
 
     .title {
+      width: 100%;
+      text-align: center;
       font-size: 2.25rem;
       line-height: 2.5rem;
-      margin-bottom: 32px;
+      margin-bottom: 12px;
       color: $text-color;
     }
   }
@@ -28,22 +32,31 @@
   .productCards {
     display: flex;
     justify-content: center;
+    transition: all 1s;
+
+    .cardBox {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
 
     .productCard {
       display: flex;
       flex-direction: column;
 
+      flex: 1 1 30%;
+
       width: 300px;
+      height: 500px;
       border: 1px solid #504c4c;
       border-color: rgb(31 45 55);
       box-shadow: 2px 1px 7px 1px #555555;
       border-radius: 15px 15px 0 0;
 
       overflow: hidden;
-      margin: 0 20px;
+      margin: 15px 15px;
       color: $text-color;
-
-      transition: all 1s;
 
       .card-top {
         opacity: 1;
@@ -52,7 +65,7 @@
         justify-content: center;
         align-items: center;
         margin: 0;
-        height: 20rem;
+        height: 300px;
 
         img {
           max-width: 50%;

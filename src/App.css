@@ -1,9 +1,10 @@
 @import './styles/CommonHeader.scss';
 @import './styles/home.scss';
 @import './styles/utils.scss';
-
+@import './styles/ProductDetail.scss';
 html,
-body {
+body,
+#root {
   margin: 0;
   box-sizing: border-box;
   background-color: #2a303c;

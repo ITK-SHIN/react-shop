@@ -15,9 +15,9 @@
     color: $white;
     width: 1360px;
   }
-  .title {
-    text-decoration: none;
+  .mainTitle {
     color: $white;
+    text-decoration: none;
   }
 
   .item {
@@ -30,8 +30,16 @@
       margin-left: 2rem;
       color: $white;
     }
+    .link {
+      color: $white;
+      text-decoration: none;
+    }
     .item-list:hover {
-      font-size: 30px;
+      font-size: 1rem;
+      .link {
+        color: bisque;
+        padding: 2px 4px;
+      }
     }
   }
 }
