@@ -13,6 +13,43 @@ const Home = ({ clothes, digital, accessory }) => {
   return (
     <div className="Home">
       <div className="home-bg"></div>
+      {/*       <div className="carousel-root carousel-container">
+        <div className="carousel carousel-slider">
+          <ul className="control-dots">
+            <li className="dot" value="0" role="button" tabIndex="0" aria-label="slide item 1"></li>
+            <li className="dot" value="1" role="button" tabIndex="0" aria-label="slide item 2"></li>
+            <li className="dot" value="2" role="button" tabIndex="0" aria-label="slide item 3"></li>
+          </ul>
+          <button className="control-arrow control-previous" type="button" aria-level="previous slide"></button>
+          <div className="slide-wrapper">
+            <ul>
+              <li className="slide"></li>
+              <li className="slide"></li>
+              <li className="slide"></li>
+              <li className="slide"></li>
+              <li className="slide"></li>
+            </ul>
+          </div>
+          <button className="control-arrow control-next" type="button" aria-level="previous slide"></button>
+        </div>
+      </div>
+ */}
+      <div className="carousel">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src="/public/img_shop_fashion.jpeg" alt="Slide 1" />
+          </div>
+          <div className="carousel-item">
+            <img src="public/img_shop_digital.jpeg" alt="Slide 2" />
+          </div>
+          <div className="carousel-item">
+            <img src="public/img_shop_grocery.jpeg" alt="Slide 3" />
+          </div>
+        </div>
+        <button className="carousel-control prev">❮</button>
+        <button className="carousel-control next">❯</button>
+      </div>{' '}
+      *
       <section className="container">
         <h2 className="title">패션</h2>
 
@@ -28,7 +65,6 @@ const Home = ({ clothes, digital, accessory }) => {
           </ul>
         </div>
       </section>
-
       <section className="container">
         <h2 className="title">액세서리</h2>
 
@@ -44,7 +80,6 @@ const Home = ({ clothes, digital, accessory }) => {
           </ul>
         </div>
       </section>
-
       <section className="container">
         <h2 className="title">디지털</h2>
 

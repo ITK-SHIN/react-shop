@@ -2,7 +2,8 @@ import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { FaLightbulb, FaRegLightbulb, FaCartShopping, FaBars } from 'react-icons/fa6';
+import { FaRegMoon, FaCartShopping, FaBars } from 'react-icons/fa6';
+import { BsSun } from 'react-icons/bs';
 const CommonHeader = ({ clothes, digital, accessory }) => {
   const clothesData = clothes;
   const digitalData = digital;
@@ -43,8 +44,8 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
           <div className="sidebar">
             <label htmlFor="" className="swap">
               <input type="checkbox" className="js-theme" />
-              <FaLightbulb />
-              <FaRegLightbulb />
+              <BsSun />
+              <FaRegMoon />
             </label>
 
             <input type="text" placeholder="검색" />

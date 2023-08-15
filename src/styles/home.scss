@@ -1,11 +1,49 @@
 @import './Utils.scss';
 .Home {
   background-color: $gray2;
-  .home-bg {
+  /*   .home-bg {
     height: 300px;
     background-image: url('/public/img_shop_fashion.jpeg');
     background-size: cover;
     background-position: center;
+  } */
+
+  .carousel {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+
+      .carousel-item {
+        flex: 0 0 auto;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .carousel-control {
+      position: absolute;
+      top: calc(50% - 20px);
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1;
+
+      &.prev {
+        left: 10px;
+      }
+
+      &.next {
+        right: 10px;
+      }
+    }
   }
 
   .container {

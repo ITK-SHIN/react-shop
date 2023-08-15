@@ -1,21 +1,30 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const ProductDetail = ({ clothes, digital, accessory }) => {
   const data = [...clothes, ...accessory, ...digital];
 
   let { id } = useParams();
   const imgUrl = `/public/${data[id - 1].url}`;
-
-  useEffect(() => {
-    console.log('안녕');
-  });
+  let nevigate = useNavigate();
 
   let [count, setCount] = useState(0);
+  let [alert, setalert] = useState(true);
+
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      setalert(false);
+    }, 3000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   return (
     <div className="productDetail">
+      {alert === true ? <div className="alert alert-warning">3초 이내 구매시 40%할인</div> : null}
+
       <figure className="card-top">
         <img src={imgUrl} alt="상품 이미지" />
       </figure>
@@ -28,9 +37,9 @@ const ProductDetail = ({ clothes, digital, accessory }) => {
         </div>
         <p className="">{data[id - 1].price}</p>
         <div className="card-actions">
-          <button>장바구니에 담기</button>
-          <button>장바구니로 이동</button>
-          <button onClick={() => setCount(count + 1)}>{count}</button>
+          <button>상품개수 {count}</button>
+          <button onClick={() => setCount(count + 1)}>장바구니에 담기</button>
+          <button onClick={() => nevigate(`/cart`)}>장바구니로 이동</button>
         </div>
       </div>
     </div>

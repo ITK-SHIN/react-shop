@@ -6,6 +6,16 @@
   align-items: center;
   padding: 20px;
 
+  .alert {
+    background-color: beige;
+    width: 110%;
+    text-align: center;
+    color: red;
+    height: 3rem;
+    line-height: 3rem;
+    font-weight: 900;
+  }
+
   .card-top {
     width: 100%;
     max-width: 400px;
@@ -91,6 +101,11 @@
         cursor: pointer;
 
         &:first-child {
+          background-color: #4b4d45;
+          color: white;
+          margin-bottom: 10px;
+        }
+        &:nth-child(2) {
           background-color: $button;
           color: white;
           margin-bottom: 10px;

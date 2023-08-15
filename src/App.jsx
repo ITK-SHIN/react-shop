@@ -1,15 +1,16 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
-import Accessory from './pages/Accessory';
-import Home from './pages/Home';
-import Digital from './pages/Digital';
 import CommonHeader from './CommonHeader';
+
+import Home from './pages/Home';
+import Accessory from './pages/Accessory';
+import Digital from './pages/Digital';
 import Cart from './pages/Cart';
 import Fassion from './pages/Fassion';
+import NoPage from './pages/NoPage';
 
 import ProductDetail from './components/productDetail';
-import NoPage from './pages/NoPage';
 import { dataFassion, dataDigital, dataAccessory } from './data';
 import { useState } from 'react';
 
