@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import ProductCard from '../components/ProductCard';
+import { useEffect } from 'react';
 
 const Digital = props => {
   const data = props.data;
+
   return (
     <div className="Home">
       <section className="container">

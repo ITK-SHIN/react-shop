@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { FaLightbulb, FaRegLightbulb, FaCartShopping } from 'react-icons/fa6';
+import { FaLightbulb, FaRegLightbulb, FaCartShopping, FaBars } from 'react-icons/fa6';
 const CommonHeader = ({ clothes, digital, accessory }) => {
   const clothesData = clothes;
   const digitalData = digital;
@@ -12,6 +12,10 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
     <>
       <header className="CommonHeader">
         <div className="header">
+          <label htmlFor="side-menu" className="hidden">
+            <FaBars />
+          </label>
+
           <h1 className="title">
             <Link to="/" className="mainTitle">
               React Shop
@@ -37,15 +41,17 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
           </ul>
 
           <div className="sidebar">
-            <button>
+            <label htmlFor="" className="swap">
+              <input type="checkbox" className="js-theme" />
               <FaLightbulb />
               <FaRegLightbulb />
-            </button>
+            </label>
+
             <input type="text" placeholder="검색" />
-            <button>
-              <Link to="/cart"></Link>
-              <FaCartShopping />
-            </button>
+
+            <Link to="/cart">
+              <FaCartShopping className="cart" />
+            </Link>
           </div>
         </div>
       </header>

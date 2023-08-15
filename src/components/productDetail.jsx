@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const ProductDetail = ({ clothes, digital, accessory }) => {
-  console.log(clothes);
-  const clothesData = clothes;
-  const digitalData = digital;
-  const accessorData = accessory;
-  const data = [...clothesData, ...accessorData, ...digitalData];
+  const data = [...clothes, ...accessory, ...digital];
 
   let { id } = useParams();
-
   const imgUrl = `/public/${data[id - 1].url}`;
+
+  useEffect(() => {
+    console.log('안녕');
+  });
+
+  let [count, setCount] = useState(0);
 
   return (
     <div className="productDetail">
@@ -28,6 +30,7 @@ const ProductDetail = ({ clothes, digital, accessory }) => {
         <div className="card-actions">
           <button>장바구니에 담기</button>
           <button>장바구니로 이동</button>
+          <button onClick={() => setCount(count + 1)}>{count}</button>
         </div>
       </div>
     </div>
