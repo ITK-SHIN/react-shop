@@ -36,14 +36,14 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
             </li>
           </ul>
 
-          <div>
+          <div className="sidebar">
             <button>
               <FaLightbulb />
               <FaRegLightbulb />
             </button>
             <input type="text" placeholder="검색" />
             <button>
-              <Link to="/cart">장바구니</Link>
+              <Link to="/cart"></Link>
               <FaCartShopping />
             </button>
           </div>

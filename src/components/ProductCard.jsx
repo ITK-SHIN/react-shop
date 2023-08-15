@@ -14,10 +14,6 @@ const ProductCard = props => {
     <div
       className="productCard"
       onClick={() => {
-        console.log(cardInfo);
-        console.log(itemKey);
-        console.log(imgUrl);
-
         nevigate(`/product/${itemKey}`);
       }}>
       <figure className="card-top">

@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 
 const ProductDetail = ({ clothes, digital, accessory }) => {
+  console.log(clothes);
   const clothesData = clothes;
   const digitalData = digital;
   const accessorData = accessory;
@@ -35,12 +35,10 @@ const ProductDetail = ({ clothes, digital, accessory }) => {
 };
 
 //data prop이 객체임을 명시적으로 지정하고, 해당 객체의 title, url, price 속성이 각각 문자열임을 지정
-/* ProductDetail.propTypes = {
-  data: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-  }).isRequired,
-}; */
+ProductDetail.propTypes = {
+  clothes: PropTypes.array.isRequired,
+  digital: PropTypes.array.isRequired,
+  accessory: PropTypes.array.isRequired,
+};
 
 export default ProductDetail;
