@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
-import { FaRegMoon, FaCartShopping, FaBars } from 'react-icons/fa6';
+/* 
+import { FaRegMoon, FaCartShopping, FaBars } from 'react-icons/fa6'; */
 import { BsSun } from 'react-icons/bs';
+
+import { FaRegMoon, FaCartPlus, FaBars } from 'react-icons/fa';
 
 const CommonHeader = () => {
   return (
@@ -68,4 +70,4 @@ export default CommonHeader;
 const CustomFaBars = <FaBars /> ?? null;
 const CustomBsSun = <BsSun /> ?? null;
 const CustomFaRegMoon = <FaRegMoon /> ?? null;
-const CustomaCartShopping = <FaCartShopping className="cart" /> ?? null;
+const CustomaCartShopping = <FaCartPlus className="cart" /> ?? null;
