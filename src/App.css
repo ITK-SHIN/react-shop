@@ -2,6 +2,7 @@
 @import './styles/home.scss';
 @import './styles/utils.scss';
 @import './styles/ProductDetail.scss';
+@import './styles/Cart.scss';
 html,
 body,
 #root {
