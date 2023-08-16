@@ -10,9 +10,7 @@ const CommonHeader = () => {
     <>
       <header className="CommonHeader">
         <div className="header">
-          <label className="hidden">
-            <FaBars />
-          </label>
+          <label className="hidden">{CustomFaBars}</label>
           <div></div>
           <h1 className="title">
             <Link to="/" className="mainTitle">
@@ -41,15 +39,13 @@ const CommonHeader = () => {
           <div className="sidebar">
             <label htmlFor="" className="swap">
               <input type="checkbox" className="js-theme" />
-              <BsSun />
-              <FaRegMoon />
+              {CustomBsSun}
+              {CustomFaRegMoon}
             </label>
 
             <input type="text" placeholder="검색" />
 
-            <Link to="/cart">
-              <FaCartShopping className="cart" />
-            </Link>
+            <Link to="/cart">{CustomaCartShopping}</Link>
           </div>
         </div>
       </header>
@@ -68,3 +64,8 @@ CommonHeader.propTypes = {
 };
 
 export default CommonHeader;
+
+const CustomFaBars = <FaBars /> ?? null;
+const CustomBsSun = <BsSun /> ?? null;
+const CustomFaRegMoon = <FaRegMoon /> ?? null;
+const CustomaCartShopping = <FaCartShopping className="cart" /> ?? null;
