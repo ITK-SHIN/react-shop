@@ -10,12 +10,28 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
   const digitalData = digital;
   const accessoryData = accessory;
 
+  const CustomaCartShopping = props => {
+    return <FaCartShopping size={24} {...props} />;
+  };
+
+  const CustomFaBars = props => {
+    return <FaBars size={24} {...props} />;
+  };
+
+  const CustomBsSun = props => {
+    return <BsSun size={24} {...props} />;
+  };
+
+  const CustomFaRegMoon = props => {
+    return <FaRegMoon size={24} {...props} />;
+  };
+
   return (
     <>
       <header className="CommonHeader">
         <div className="header">
           <label htmlFor="side-menu" className="hidden">
-            <FaBars />
+            <CustomFaBars />
           </label>
           <div></div>
           <h1 className="title">
@@ -45,14 +61,14 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
           <div className="sidebar">
             <label htmlFor="" className="swap">
               <input type="checkbox" className="js-theme" />
-              <BsSun />
-              <FaRegMoon />
+              <CustomBsSun />
+              <CustomFaRegMoon />
             </label>
 
             <input type="text" placeholder="검색" />
 
             <Link to="/cart">
-              <FaCartShopping className="cart" />
+              <CustomaCartShopping className="cart" />
             </Link>
           </div>
         </div>
