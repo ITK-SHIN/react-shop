@@ -9,4 +9,10 @@ export default defineConfig({
       external: ['react-icons/fa6'],
     },
   },
+  resolve: {
+    alias: {
+      '@': '/vercel/path0/src',
+      '@styles': '/vercel/path0/src/styles',
+    },
+  },
 });
