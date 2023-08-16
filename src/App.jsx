@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import { Route, Routes } from 'react-router-dom';
 
 import CommonHeader from './CommonHeader';
