@@ -15,7 +15,7 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
       <header className="CommonHeader">
         <div className="header">
           <label htmlFor="side-menu" className="hidden">
-            {/* <FaBars /> */}
+            <FaBars />
           </label>
           <div></div>
           <h1 className="title">
@@ -45,13 +45,15 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
           <div className="sidebar">
             <label htmlFor="" className="swap">
               <input type="checkbox" className="js-theme" />
-              {/*    <BsSun />
-              <FaRegMoon /> */}
+              <BsSun />
+              <FaRegMoon />
             </label>
 
             <input type="text" placeholder="검색" />
 
-            <Link to="/cart">{/*   <FaCartShopping className="cart" /> */}</Link>
+            <Link to="/cart">
+              <FaCartShopping className="cart" />
+            </Link>
           </div>
         </div>
       </header>
