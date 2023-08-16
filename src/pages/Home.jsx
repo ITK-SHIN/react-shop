@@ -1,5 +1,4 @@
 import ProductCard from '../components/ProductCard.jsx';
-import { Link, useNavigate } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 
