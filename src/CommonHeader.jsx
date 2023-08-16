@@ -2,8 +2,10 @@ import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { FaRegMoon, FaCartShopping, FaBars } from 'react-icons/fa6';
+/* import { FaRegMoon, FaCartShopping, FaBars } from 'react-icons/fa6'; */
+import { FaRegMoon, FaCartShopping, FaBars } from '../node_modules/react-icons/fa6';
 import { BsSun } from 'react-icons/bs';
+
 const CommonHeader = ({ clothes, digital, accessory }) => {
   const clothesData = clothes;
   const digitalData = digital;
