@@ -10,20 +10,20 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
   const digitalData = digital;
   const accessoryData = accessory;
 
-  const CustomaCartShopping = props => {
-    return <FaCartShopping size={24} {...props} />;
+  const CustomaCartShopping = show => {
+    return show ? <FaCartShopping /> : null;
   };
 
-  const CustomFaBars = props => {
-    return <FaBars size={24} {...props} />;
+  const CustomFaBars = show => {
+    return show ? <FaBars /> : null;
   };
 
-  const CustomBsSun = props => {
-    return <BsSun size={24} {...props} />;
+  const CustomBsSun = show => {
+    return show ? <BsSun /> : null;
   };
 
-  const CustomFaRegMoon = props => {
-    return <FaRegMoon size={24} {...props} />;
+  const CustomFaRegMoon = show => {
+    return show ? <FaRegMoon /> : null;
   };
 
   return (
