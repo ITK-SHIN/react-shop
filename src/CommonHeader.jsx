@@ -5,33 +5,13 @@ import PropTypes from 'prop-types';
 import { FaRegMoon, FaCartShopping, FaBars } from 'react-icons/fa6';
 import { BsSun } from 'react-icons/bs';
 
-const CommonHeader = ({ clothes, digital, accessory }) => {
-  const clothesData = clothes;
-  const digitalData = digital;
-  const accessoryData = accessory;
-
-  const CustomaCartShopping = show => {
-    return show ? <FaCartShopping /> : null;
-  };
-
-  const CustomFaBars = show => {
-    return show ? <FaBars /> : null;
-  };
-
-  const CustomBsSun = show => {
-    return show ? <BsSun /> : null;
-  };
-
-  const CustomFaRegMoon = show => {
-    return show ? <FaRegMoon /> : null;
-  };
-
+const CommonHeader = () => {
   return (
     <>
       <header className="CommonHeader">
         <div className="header">
-          <label htmlFor="side-menu" className="hidden">
-            <CustomFaBars />
+          <label className="hidden">
+            <FaBars />
           </label>
           <div></div>
           <h1 className="title">
@@ -42,17 +22,17 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
 
           <ul className="item">
             <li className="item-list">
-              <Link to="/fassion" className="link" clothes={clothesData}>
+              <Link to="/fassion" className="link">
                 패션
               </Link>
             </li>
             <li className="item-list">
-              <Link to="/accessory" className="link" accessory={accessoryData}>
+              <Link to="/accessory" className="link">
                 액세서리
               </Link>
             </li>
             <li className="item-list">
-              <Link to="/digital" className="link" digital={digitalData}>
+              <Link to="/digital" className="link">
                 디지털
               </Link>
             </li>
@@ -61,14 +41,14 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
           <div className="sidebar">
             <label htmlFor="" className="swap">
               <input type="checkbox" className="js-theme" />
-              <CustomBsSun />
-              <CustomFaRegMoon />
+              <BsSun />
+              <FaRegMoon />
             </label>
 
             <input type="text" placeholder="검색" />
 
             <Link to="/cart">
-              <CustomaCartShopping className="cart" />
+              <FaCartShopping className="cart" />
             </Link>
           </div>
         </div>
