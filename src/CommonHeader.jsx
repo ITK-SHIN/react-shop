@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { FaRegMoon, FaCartShopping, FaBars } from 'react-icons/fa6';
-
 import { BsSun } from 'react-icons/bs';
 
 const CommonHeader = ({ clothes, digital, accessory }) => {
@@ -18,7 +17,7 @@ const CommonHeader = ({ clothes, digital, accessory }) => {
           <label htmlFor="side-menu" className="hidden">
             <FaBars />
           </label>
-
+          <div></div>
           <h1 className="title">
             <Link to="/" className="mainTitle">
               React Shop
