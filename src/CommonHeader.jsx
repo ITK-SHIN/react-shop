@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 /* 
 import { FaRegMoon, FaCartShopping, FaBars } from 'react-icons/fa6'; */
@@ -8,6 +8,10 @@ import { BsSun } from 'react-icons/bs';
 import { FaRegMoon, FaCartPlus, FaBars } from 'react-icons/fa';
 
 const CommonHeader = () => {
+  const activeStyle = {
+    color: 'bisque',
+  };
+
   return (
     <>
       <header className="CommonHeader">
@@ -22,19 +26,19 @@ const CommonHeader = () => {
 
           <ul className="item">
             <li className="item-list">
-              <Link to="/fassion" className="link">
+              <NavLink to="/fassion" className="link" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
                 패션
-              </Link>
+              </NavLink>
             </li>
             <li className="item-list">
-              <Link to="/accessory" className="link">
+              <NavLink to="/accessory" className="link" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
                 액세서리
-              </Link>
+              </NavLink>
             </li>
             <li className="item-list">
-              <Link to="/digital" className="link">
+              <NavLink to="/digital" className="link" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
                 디지털
-              </Link>
+              </NavLink>
             </li>
           </ul>
 
