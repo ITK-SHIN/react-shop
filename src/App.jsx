@@ -13,6 +13,7 @@ import NoPage from './pages/NoPage';
 import ProductDetail from './components/productDetail';
 import { dataFassion, dataDigital, dataAccessory } from './data';
 import { useState } from 'react';
+import Footer from './pages/Footer';
 
 function App() {
   let [clothes] = useState(dataFassion);
@@ -22,18 +23,20 @@ function App() {
   return (
     <Routes>
       <Route element={<CommonHeader clothes={clothes} digital={digital} accessory={accessory} />}>
-        <Route path="/" element={<Home clothes={clothes} digital={digital} accessory={accessory} />} />
-        <Route path="/fassion" element={<Fassion data={clothes} />}>
-          {/*   <Route path="/fassion/:id" element={<ProductDetail data={clothes} />} /> */}
+        <Route element={<Footer />}>
+          <Route path="/" element={<Home clothes={clothes} digital={digital} accessory={accessory} />} />
+          <Route path="/fassion" element={<Fassion data={clothes} />}>
+            {/*   <Route path="/fassion/:id" element={<ProductDetail data={clothes} />} /> */}
+          </Route>
+          <Route path="/accessory" element={<Accessory data={accessory} />} />
+          <Route path="/digital" element={<Digital data={digital} />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="/product/:id"
+            element={<ProductDetail clothes={clothes} digital={digital} accessory={accessory} />}
+          />
+          <Route path="*" element={<NoPage />} />
         </Route>
-        <Route path="/accessory" element={<Accessory data={accessory} />} />
-        <Route path="/digital" element={<Digital data={digital} />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route
-          path="/product/:id"
-          element={<ProductDetail clothes={clothes} digital={digital} accessory={accessory} />}
-        />
-        <Route path="*" element={<NoPage />} />
       </Route>
     </Routes>
   );

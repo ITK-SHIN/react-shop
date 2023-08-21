@@ -3,6 +3,7 @@
 @import './styles/home.scss';
 @import './styles/productDetail.scss';
 @import './styles/cart.scss';
+@import './styles/footer.scss';
 html,
 body,
 #root {

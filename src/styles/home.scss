@@ -65,6 +65,10 @@
       margin-bottom: 12px;
       color: $text-color;
     }
+
+    &:last-child {
+      margin-bottom: 80px;
+    }
   }
 
   .productCards {
