@@ -8,10 +8,6 @@ import { BsSun } from 'react-icons/bs';
 import { FaRegMoon, FaCartPlus, FaBars } from 'react-icons/fa';
 
 const CommonHeader = () => {
-  const activeStyle = {
-    color: 'bisque',
-  };
-
   return (
     <>
       <header className="CommonHeader">
@@ -25,21 +21,9 @@ const CommonHeader = () => {
           </h1>
 
           <ul className="item">
-            <li className="item-list">
-              <NavLink to="/fassion" className="link" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
-                패션
-              </NavLink>
-            </li>
-            <li className="item-list">
-              <NavLink to="/accessory" className="link" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
-                액세서리
-              </NavLink>
-            </li>
-            <li className="item-list">
-              <NavLink to="/digital" className="link" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
-                디지털
-              </NavLink>
-            </li>
+            <NavItem link={'fassion'} itemName={'패션'} />
+            <NavItem link={'accessory'} itemName={'액세서리'} />
+            <NavItem link={'digital'} itemName={'디지털'} />
           </ul>
 
           <div className="sidebar">
@@ -75,3 +59,21 @@ const CustomFaBars = <FaBars /> ?? null;
 const CustomBsSun = <BsSun /> ?? null;
 const CustomFaRegMoon = <FaRegMoon /> ?? null;
 const CustomaCartShopping = <FaCartPlus className="cart" /> ?? null;
+
+const NavItem = ({ link, itemName }) => {
+  const activeStyle = {
+    color: 'bisque',
+  };
+  return (
+    <li className="item-list">
+      <NavLink to={`/${link}`} className="link" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
+        {itemName}
+      </NavLink>
+    </li>
+  );
+};
+
+NavItem.propTypes = {
+  link: PropTypes.string.isRequired,
+  itemName: PropTypes.string.isRequired,
+};
